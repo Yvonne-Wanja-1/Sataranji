@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'screens/home_screen.dart';
 import 'screens/about_screen.dart';
 import 'screens/join_screen.dart';
@@ -20,7 +18,7 @@ class SataranjiApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp(
       title: 'Sataranji Africa',
       theme: ThemeData(
         useMaterial3: true,
@@ -28,20 +26,8 @@ class SataranjiApp extends StatelessWidget {
           seedColor: const Color(0xFF1F1F1F),
           brightness: Brightness.light,
         ),
-        textTheme: GoogleFonts.interTextTheme(),
       ),
       home: const MainScreen(),
-      getPages: [
-        GetPage(name: '/home', page: () => const HomeScreen()),
-        GetPage(name: '/about', page: () => const AboutScreen()),
-        GetPage(name: '/join', page: () => const JoinScreen()),
-        GetPage(name: '/learn', page: () => const LearnScreen()),
-        GetPage(name: '/events', page: () => const EventsScreen()),
-        GetPage(name: '/gallery', page: () => const GalleryScreen()),
-        GetPage(name: '/blogs', page: () => const BlogsScreen()),
-        GetPage(name: '/merchandise', page: () => const MerchandiseScreen()),
-        GetPage(name: '/contact', page: () => const ContactScreen()),
-      ],
     );
   }
 }
